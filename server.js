@@ -41,6 +41,13 @@ app.get('/about', (request, response) => {
         // currentYear: new Date().getFullYear()
     });
 });
+
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle: 'projects done',
+        welcomeMessage:'Project text that should go here'
+    })
+});
 app.get('/bad', (request, response) => {
     response.send({
         errorMessage: 'unable to handle request'
